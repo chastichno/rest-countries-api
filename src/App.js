@@ -1,25 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+  // Route,
+  // Link,
+  // useParams
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import DetailPage from './components/DetailPage';
+import Homepage from './components/Homepage';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: true
+    }
+    this.switcher = this.switcher.bind(this);
+  }
+  switcher() {
+    this.setState(state => ({ theme: !state.theme }))
+  }
+  render() {
+    return (
+      <Router>
+        <div className={this.state.theme ? "light page" : "dark page"}>
+          <Switch>
+            <Route exact path="/" >
+              <Homepage themeSwitcher={this.switcher} theme={this.state.theme} />
+            </Route>
+            <Route path="/:id" component={DetailPage} />
+            {/* <DetailPage />
+            </Route> */}
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+
 }
 
 export default App;
+

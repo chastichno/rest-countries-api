@@ -1,1 +1,260 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  --darkBlue: hsl(209, 23%, 22%);
+  --veryDarkBlue1: hsl(207, 26%, 17%);
+  --veryDarkBlue2: hsl(200, 15%, 8%);
+  --darkGray: hsl(0, 0%, 52%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.light {
+  --background: var(--veryLightGray);
+  --elements: var(--white);
+  --font: var(--veryDarkBlue2);
+  --input: var(--darkGray);
+}
+
+.dark {
+  --background: var(--veryDarkBlue1);
+  --elements: var(--darkBlue);
+  --font: var(--white);
+  --input: var(--white);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.page {
+  background-color: var(--background);
+  color: var(--font);
+}
+
+.detail-page {
+  font-size: 16px;
+}
+
+.homepage {
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.header {
+  background-color: var(--elements);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  padding: 0 15px 0;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.05);
+}
+
+.header__logo {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.header__theme {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.header__theme img {
+  margin-right: 5px;
+}
+
+.header__toggle {
+  width: 12px;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.search {
+  display: block;
+  width: 345px;
+  height: 50px;
+  margin: 0 auto 40px;
+  background-color: var(--elements);
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30px 0 73px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--input);
+}
+
+.search::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--input);
+  opacity: 1;
+  /* Firefox */
+}
+
+.search:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--input);
+  opacity: 1;
+  /* Firefox */
+}
+
+.search::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--input);
+  opacity: 1;
+  /* Firefox */
+}
+
+.search::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--input);
+  opacity: 1;
+  /* Firefox */
+}
+
+.search:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--input);
+}
+
+.search::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--input);
+}
+
+.dropdown {
+  font-weight: 300;
+  margin-bottom: 30px;
+  width: 200px;
+}
+
+.dropdown__btn {
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  background-color: var(--elements);
+  background-size: 4%;
+  background-repeat: no-repeat;
+  background-position: 172px center;
+  border: none;
+  border-radius: 5px;
+  color: red;
+  -webkit-box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+  padding: 0 25px;
+  display: block;
+  text-align: left;
+  color: var(--font);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dropdown__content {
+  width: 200px;
+  display: none;
+  position: absolute;
+  background-color: var(--elements);
+  padding: 10px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  top: 250px;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+}
+
+.dropdown__option {
+  display: block;
+  line-height: 24px;
+  border: none;
+  background-color: var(--elements);
+  color: var(--font);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown__show {
+  display: block;
+}
+
+.dropdown:hover > .dropdown__content {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 264px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 336px;
+  background-color: var(--elements);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 3px 9px 2px rgba(0, 0, 0, 0.07);
+}
+
+.card__image {
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card__text {
+  padding: 20px 25px 0px;
+}
+
+.card__link {
+  display: block;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--font);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.card__properties {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.card__bold {
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */

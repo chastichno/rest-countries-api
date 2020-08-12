@@ -1,0 +1,175 @@
+.homepage {
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.header {
+  background-color: var(--elements);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 15px 0;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 8px 2px rgba($color: #000000, $alpha: 0.05);
+
+  &__logo {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  &__theme {
+    img {
+      margin-right: 5px;
+    }
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  &__toggle {
+    width: 12px;
+    transform: translateY(10%);
+  }
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.search {
+  display: block;
+  width: 345px;
+  height: 50px;
+  margin: 0 auto 40px;
+  background-color: var(--elements);
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 9px 2px rgba($color: #000000, $alpha: 0.07);
+  box-sizing: border-box;
+  padding: 0 30px 0 73px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--input);
+  //text-transform: capitalize;
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--input);
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--input);
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--input);
+  }
+}
+
+.dropdown {
+  font-weight: 300;
+  margin-bottom: 30px;
+  width: 200px;
+
+  &__btn {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    background-color: var(--elements);
+    background-size: 4%;
+    background-repeat: no-repeat;
+    background-position: 172px center;
+    border: none;
+    border-radius: 5px;
+    color: red;
+    box-shadow: 0px 3px 9px 2px rgba($color: #000000, $alpha: 0.07);
+    padding: 0 25px;
+    display: block;
+    text-align: left;
+    color: var(--font);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__content {
+    width: 200px;
+    display: none;
+    position: absolute;
+    background-color: var(--elements);
+    padding: 10px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    top: 250px;
+    font-size: 12px;
+
+    box-shadow: 0px 3px 9px 2px rgba($color: #000000, $alpha: 0.07);
+  }
+  &__option {
+    display: block;
+    line-height: 24px;
+    border: none;
+    background-color: var(--elements);
+    color: var(--font);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 12px;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  &__show {
+    display: block;
+  }
+}
+
+.dropdown:hover > .dropdown__content {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 264px;
+  margin: 0 auto;
+}
+.card {
+  height: 336px;
+  background-color: var(--elements);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  box-shadow: 0px 3px 9px 2px rgba($color: #000000, $alpha: 0.07);
+
+  &__image {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    //margin-bottom: 30px;
+  }
+  &__text {
+    padding: 20px 25px 0px;
+  }
+  &__link {
+    display: block;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--font);
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  &__properties {
+    font-size: 14px;
+    line-height: 23px;
+  }
+  &__bold {
+    font-weight: 600;
+  }
+}
