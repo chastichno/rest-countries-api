@@ -148,8 +148,9 @@ body {
 
 .dropdown {
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 200px;
+  padding-bottom: 20px;
 }
 
 .dropdown__btn {
@@ -190,9 +191,11 @@ body {
 }
 
 .dropdown__option {
+  width: 100%;
   display: block;
   line-height: 24px;
   border: none;
+  text-align: left;
   background-color: var(--elements);
   color: var(--font);
   font-family: "Nunito Sans", sans-serif;
@@ -200,10 +203,6 @@ body {
   padding: 0;
   cursor: pointer;
   font-weight: 600;
-}
-
-.dropdown__show {
-  display: block;
 }
 
 .dropdown:hover > .dropdown__content {

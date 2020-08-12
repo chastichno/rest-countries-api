@@ -74,8 +74,9 @@
 
 .dropdown {
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   width: 200px;
+  padding-bottom: 20px;
 
   &__btn {
     cursor: pointer;
@@ -107,13 +108,14 @@
     border-radius: 5px;
     top: 250px;
     font-size: 12px;
-
     box-shadow: 0px 3px 9px 2px rgba($color: #000000, $alpha: 0.07);
   }
   &__option {
+    width: 100%;
     display: block;
     line-height: 24px;
     border: none;
+    text-align: left;
     background-color: var(--elements);
     color: var(--font);
     font-family: "Nunito Sans", sans-serif;
@@ -122,9 +124,9 @@
     cursor: pointer;
     font-weight: 600;
   }
-  &__show {
-    display: block;
-  }
+  // &__show {
+  //   display: block;
+  // }
 }
 
 .dropdown:hover > .dropdown__content {
