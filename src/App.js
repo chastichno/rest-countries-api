@@ -8,9 +8,9 @@ import {
   // useParams
 } from "react-router-dom";
 
-
 import DetailPage from './components/DetailPage';
 import Homepage from './components/Homepage';
+import Navbar from './components/Navbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,13 +27,14 @@ class App extends React.Component {
     return (
       <Router>
         <div className={this.state.theme ? "light page" : "dark page"}>
+          <Navbar themeSwitcher={this.switcher} theme={this.state.theme} />
           <Switch>
             <Route exact path="/" >
-              <Homepage themeSwitcher={this.switcher} theme={this.state.theme} />
+              <Homepage theme={this.state.theme} />
             </Route>
-            <Route path="/:id" component={DetailPage} />
-            {/* <DetailPage />
-            </Route> */}
+            <Route path="/:id" >
+              <DetailPage theme={this.state.theme} />
+            </Route>
           </Switch>
         </div>
       </Router>

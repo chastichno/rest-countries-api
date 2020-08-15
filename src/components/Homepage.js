@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
 import Dropdown from './Dropdown';
 import {
     Link
@@ -68,7 +67,6 @@ export default class Homepage extends Component {
         if (isLoading) {
             return (
                 <div>
-                    <Navbar themeSwitcher={this.props.themeSwitcher} theme={this.props.theme} />
                     <div> Loading... </div>
                 </div>
             )
@@ -84,16 +82,15 @@ export default class Homepage extends Component {
                     return this.state.region ? country.region === this.state.region : true;
                 })
             : {}
-
         return (
             <div className="homepage">
-                <Navbar themeSwitcher={this.props.themeSwitcher} theme={this.props.theme} />
                 <div className="container">
-                    <input id="search" name="search" onChange={this.onChange} className="search" placeholder="Search for a country…" style={{ backgroundImage: `url(${this.props.theme ? search_light : search_dark})` }}></input>
-                    <Dropdown region={this.state.region} regionBtn={this.regionBtn} theme={this.props.theme} />
-
+                    <div className="filters">
+                        <input id="search" name="search" onChange={this.onChange} className="search" placeholder="Search for a country…" style={{ backgroundImage: `url(${this.props.theme ? search_light : search_dark})` }}></input>
+                        <Dropdown region={this.state.region} regionBtn={this.regionBtn} theme={this.props.theme} />
+                    </div>
                     {filteredCountries.length > 0 ?
-                        <ul>
+                        <ul className="list">
                             {filteredCountries
 
                                 .map(country => (
@@ -102,10 +99,7 @@ export default class Homepage extends Component {
                                         <div className="card__image" style={{ backgroundImage: `url(${country.flag})` }}></div>
                                         <div className="card__text">
                                             <Link className="card__link" to={{
-                                                pathname: country.alpha3Code,
-                                                state: {
-                                                    name: country.name
-                                                }
+                                                pathname: country.alpha3Code
                                             }}>{country.name}</Link>
                                             <ul>
                                                 <li className="card__properties"><span className="card__bold">Population: </span>{country.population.toLocaleString('en-US')}</li>

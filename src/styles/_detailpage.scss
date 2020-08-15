@@ -1,0 +1,105 @@
+.detail {
+  &__main {
+    @include breakpoint-up(large) {
+      display: flex;
+    }
+  }
+  padding: 15px 30px;
+  @include breakpoint-up(large) {
+    padding: 30px 80px;
+  }
+  &__back {
+    border: none;
+    display: block;
+    max-width: 105px;
+    box-sizing: border-box;
+    background-color: var(--elements);
+    cursor: pointer;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 23px center;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: 0.15);
+    border-radius: 3px;
+    padding: 7px 25px 7px 50px;
+    text-decoration: none;
+    color: var(--font);
+    margin-bottom: 60px;
+  }
+  &__flag {
+    img {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include breakpoint-up(large) {
+      flex: 1;
+      margin-right: 8vw;
+    }
+  }
+  &__bold {
+    font-weight: 600;
+  }
+  &__info {
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+  }
+  &__properties {
+    li {
+      margin-bottom: 10px;
+    }
+    margin-bottom: 45px;
+    @include breakpoint-up(large) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+  }
+  .group1 {
+    margin-bottom: 50px;
+    @include breakpoint-up(large) {
+      margin-right: 80px;
+    }
+  }
+  &__prop_group {
+    @include breakpoint-up(large) {
+      flex: 1;
+    }
+  }
+  &__borders {
+    &__title {
+      min-width: 140px;
+      @include breakpoint-down(medium) {
+        margin-bottom: 15px;
+      }
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__border {
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: var(--elements);
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: 0.05);
+    border-radius: 3px;
+    padding: 7px 25px 7px;
+    text-decoration: none;
+    color: var(--font);
+    margin: 5px 10px 5px 0;
+  }
+}
